@@ -9,7 +9,7 @@ Feature: Display the body fat data
     When I open the accompanying app
     Then I can see my latest body fat data
 
-  Scenario: Use the app to actively search the weight scale
+  Scenario: Use the app to search the weight scale actively
     Given I open the accompanying app
     When I tap the search button
     Then The app will actively search the scale
