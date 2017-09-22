@@ -16,4 +16,4 @@ Feature: As a user
   Scenario: Display the data
     Given I install an app on my device
     When I open the app
-    Then I will see my body fat data 
+    Then I will see my body fat data
