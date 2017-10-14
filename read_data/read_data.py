@@ -1,14 +1,20 @@
 from sense_hat import SenseHat
+import time
 
-sense_nanoha = SenseHat()
-sense_nanoha.clear()
+while True:
+    sense_nanoha = SenseHat()
 
-pressure = sense_nanoha.get_pressure()
-print(pressure)
+    pressure = sense_nanoha.get_pressure()
 
-temp = sense_nanoha.get_temperature()
-print(temp)
+    temp = sense_nanoha.get_temperature()
 
-humidity = sense_nanoha.get_humidity()
-print(humidity)
+    humidity = sense_nanoha.get_humidity()
+
+    time.sleep(5)
+
+    put = input("Type 1 to terminate")
+    brk = int(put)
+    if brk==1:
+        break
+
 
