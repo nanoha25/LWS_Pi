@@ -20,7 +20,4 @@ while True:
     conn.close()
 
 
-    time.sleep(30)
-
-
-
+    time.sleep(600)
