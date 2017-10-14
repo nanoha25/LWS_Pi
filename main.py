@@ -9,7 +9,7 @@ while True:
     temp = sense_nanoha.get_temperature()
     humidity = sense_nanoha.get_humidity()
 
-    params = urllib.urlencode({'field1': 12, 'field2': 11, 'key': '9B1ZCDNMTLRHRXRP'})
+    params = urllib.urlencode({'field1': 12, 'field2': 11, 'field3':15, 'key': '9B1ZCDNMTLRHRXRP'})
     headers = {"Content-type": "application/x-www-form-urlencoded", "Accept": "text/plain"}
     conn = httplib.HTTPConnection("api.thingspeak.com:80")
     conn.request("POST", "/update", params, headers)
