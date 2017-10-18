@@ -15,11 +15,6 @@ while True:
     conn.request("POST", "/update", params, headers)
     response = conn.getresponse()
     conn.close()
-    # params = urllib.urlencode({'field1': 3, 'field2': 2, 'key': '9B1ZCDNMTLRHRXRP'})
-    # conn = httplib.HTTPConnection("api.thingspeak.com:80")
-    # conn.request("POST", "/update", params, headers)
-    # response = conn.getresponse()
-    # conn.close()
 
     time.sleep(30)
 
