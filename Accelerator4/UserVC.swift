@@ -55,15 +55,16 @@ class UserVC: UIViewController,UIImagePickerControllerDelegate,UINavigationContr
         weightfiled.tag = 0 //Increment accordingly
         heightfiled.delegate = self
         heightfiled.tag = 0 //Increment accordingly
+        self.imagePicker.sourceType = UIImagePickerControllerSourceType.camera
     }
     @IBAction func chooseImage(_sender:Any)
     {
         
         let actionSheet = UIAlertController(title:"Photo Source", message:"Choose one photo",preferredStyle: .actionSheet)
         actionSheet.addAction(UIAlertAction(title:"Camera",style:.default,handler: { (action:UIAlertAction) in
-            if UIImagePickerController.isSourceTypeAvailable(.camera)
+            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)
             {
-                self.imagePicker.sourceType = .camera
+                self.imagePicker.sourceType = UIImagePickerControllerSourceType.camera
                 self.present(self.imagePicker,animated: true,completion: nil)
             }
             else
@@ -74,8 +75,16 @@ class UserVC: UIViewController,UIImagePickerControllerDelegate,UINavigationContr
         }))
         actionSheet.addAction(UIAlertAction(title:"Photo Library",style:.default,handler: { (action:UIAlertAction) in
             
-                self.imagePicker.sourceType = .photoLibrary
+            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary)
+            {
+                self.imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
                 self.present(self.imagePicker,animated: true,completion: nil)
+                self.imagePicker.sourceType = UIImagePickerControllerSourceType.camera
+            }
+            else
+            {
+                print("Photo library is not available")
+            }
         }))
         actionSheet.addAction(UIAlertAction(title:"Cancel",style:.cancel,handler: nil))
         self.present(actionSheet,animated: true,completion: nil)
