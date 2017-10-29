@@ -3,43 +3,31 @@ import time
 import httplib, urllib
 
 
-class MainFuc:
-    while True:
-        def setup(self):
-            sense_nanoha = SenseHat()
+while True:
+    def setup():
 
-            pressure = sense_nanoha.get_pressure()
-            temp_ori = sense_nanoha.get_temperature()
-            humidity = sense_nanoha.get_humidity()
-            print('Got data!\n')
-            return temp_ori, pressure, humidity
+        sense_nanoha = SenseHat()
 
-        def modifier(self, temp_ori):
-            ftr = 1.39
-            temp = temp_ori / ftr
-            print('Data modified!\n')
-            return temp
+        pressure = sense_nanoha.get_pressure()
+        temp_ori = sense_nanoha.get_temperature()
+        humidity = sense_nanoha.get_humidity()
 
-        def send_data(self, temp, pressure, humidity):
-            params = urllib.urlencode(
-                {'field1': temp, 'field2': humidity, 'field3': pressure, 'key': '9B1ZCDNMTLRHRXRP'})
-            headers = {"Content-type": "application/x-www-form-urlencoded", "Accept": "text/plain"}
-            conn = httplib.HTTPConnection("api.thingspeak.com:80")
-            conn.request("POST", "/update", params, headers)
-            response = conn.getresponse()
-            conn.close()
-            print('Data sent!\n')
-            return 0
+        ftr = 1.39
+        temp = temp_ori / ftr
 
-        def timer(self):
-            time.sleep(30)
-            print('Woke up!\n')
-            return 0
+        params = urllib.urlencode(
+            {'field1': temp, 'field2': humidity, 'field3': pressure, 'key': '9B1ZCDNMTLRHRXRP'})
+        headers = {"Content-type": "application/x-www-form-urlencoded", "Accept": "text/plain"}
+        conn = httplib.HTTPConnection("api.thingspeak.com:80")
+        conn.request("POST", "/update", params, headers)
+        response = conn.getresponse()
+        conn.close()
 
-        setup()
-        modifier()
-        send_data()
-        timer()
+        time.sleep(30)
+
+
+    setup()
+
         # put = input("Type 1 to terminate")
         # brk = int(put)
         # if brk==1:
