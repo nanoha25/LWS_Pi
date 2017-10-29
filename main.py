@@ -4,7 +4,7 @@ import httplib, urllib
 
 
 
-def setup():
+def weather_station():
 
     sense_nanoha = SenseHat()
 
@@ -29,4 +29,4 @@ def setup():
     return 0
 
 #while True:
-    setup()
+    weather_station()
