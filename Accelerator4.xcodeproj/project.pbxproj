@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3FA4750F9EC18A8C24917D6E /* Pods_Accelerator4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3BA49D041C9318A5392788 /* Pods_Accelerator4.framework */; };
 		B3B4A86A1FA5DB2E00828FED /* camera-vector-image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3B4A8691FA5DB2E00828FED /* camera-vector-image.jpg */; };
+		B3B4A8721FA6765F00828FED /* Accelerator4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B4A8711FA6765F00828FED /* Accelerator4Tests.swift */; };
+		B3B4A8791FA6812600828FED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CF65791FA48D6B0024A9A3 /* ViewController.swift */; };
 		B3CF65781FA48D6B0024A9A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CF65771FA48D6B0024A9A3 /* AppDelegate.swift */; };
 		B3CF657A1FA48D6B0024A9A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CF65791FA48D6B0024A9A3 /* ViewController.swift */; };
 		B3CF657D1FA48D6B0024A9A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3CF657B1FA48D6B0024A9A3 /* Main.storyboard */; };
@@ -21,11 +23,24 @@
 		B3CF65921FA50B870024A9A3 /* slip-and-fall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3CF65911FA50B860024A9A3 /* slip-and-fall.jpg */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B3B4A8741FA6765F00828FED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3CF656C1FA48D6B0024A9A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3CF65731FA48D6B0024A9A3;
+			remoteInfo = Accelerator4;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		248D6CC9033B95371A79770F /* Pods-Accelerator4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Accelerator4.release.xcconfig"; path = "Pods/Target Support Files/Pods-Accelerator4/Pods-Accelerator4.release.xcconfig"; sourceTree = "<group>"; };
 		4C3BA49D041C9318A5392788 /* Pods_Accelerator4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Accelerator4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64674FE921BB8C236799EF79 /* Pods-Accelerator4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Accelerator4.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Accelerator4/Pods-Accelerator4.debug.xcconfig"; sourceTree = "<group>"; };
 		B3B4A8691FA5DB2E00828FED /* camera-vector-image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "camera-vector-image.jpg"; sourceTree = "<group>"; };
+		B3B4A86F1FA6765F00828FED /* Accelerator4Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Accelerator4Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3B4A8711FA6765F00828FED /* Accelerator4Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accelerator4Tests.swift; sourceTree = "<group>"; };
+		B3B4A8731FA6765F00828FED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3CF65741FA48D6B0024A9A3 /* Accelerator4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Accelerator4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3CF65771FA48D6B0024A9A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3CF65791FA48D6B0024A9A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +56,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B3B4A86C1FA6765F00828FED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B3CF65711FA48D6B0024A9A3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -60,10 +82,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B3B4A8701FA6765F00828FED /* Accelerator4Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B3B4A8711FA6765F00828FED /* Accelerator4Tests.swift */,
+				B3B4A8731FA6765F00828FED /* Info.plist */,
+			);
+			path = Accelerator4Tests;
+			sourceTree = "<group>";
+		};
 		B3CF656B1FA48D6B0024A9A3 = {
 			isa = PBXGroup;
 			children = (
 				B3CF65761FA48D6B0024A9A3 /* Accelerator4 */,
+				B3B4A8701FA6765F00828FED /* Accelerator4Tests */,
 				B3CF65751FA48D6B0024A9A3 /* Products */,
 				BE8A655994CC1787A630BDF4 /* Pods */,
 				AB84DAAEE725B73ED4B9EE3F /* Frameworks */,
@@ -74,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				B3CF65741FA48D6B0024A9A3 /* Accelerator4.app */,
+				B3B4A86F1FA6765F00828FED /* Accelerator4Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,6 +142,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B3B4A86E1FA6765F00828FED /* Accelerator4Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3B4A8761FA6765F00828FED /* Build configuration list for PBXNativeTarget "Accelerator4Tests" */;
+			buildPhases = (
+				B3B4A86B1FA6765F00828FED /* Sources */,
+				B3B4A86C1FA6765F00828FED /* Frameworks */,
+				B3B4A86D1FA6765F00828FED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3B4A8751FA6765F00828FED /* PBXTargetDependency */,
+			);
+			name = Accelerator4Tests;
+			productName = Accelerator4Tests;
+			productReference = B3B4A86F1FA6765F00828FED /* Accelerator4Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B3CF65731FA48D6B0024A9A3 /* Accelerator4 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3CF65861FA48D6B0024A9A3 /* Build configuration list for PBXNativeTarget "Accelerator4" */;
@@ -139,6 +190,11 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Leo Lee";
 				TargetAttributes = {
+					B3B4A86E1FA6765F00828FED = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B3CF65731FA48D6B0024A9A3;
+					};
 					B3CF65731FA48D6B0024A9A3 = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
@@ -159,11 +215,19 @@
 			projectRoot = "";
 			targets = (
 				B3CF65731FA48D6B0024A9A3 /* Accelerator4 */,
+				B3B4A86E1FA6765F00828FED /* Accelerator4Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B3B4A86D1FA6765F00828FED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B3CF65721FA48D6B0024A9A3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -229,6 +293,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B3B4A86B1FA6765F00828FED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3B4A8791FA6812600828FED /* ViewController.swift in Sources */,
+				B3B4A8721FA6765F00828FED /* Accelerator4Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B3CF65701FA48D6B0024A9A3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -241,6 +314,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B3B4A8751FA6765F00828FED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3CF65731FA48D6B0024A9A3 /* Accelerator4 */;
+			targetProxy = B3B4A8741FA6765F00828FED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B3CF657B1FA48D6B0024A9A3 /* Main.storyboard */ = {
@@ -262,6 +343,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B3B4A8771FA6765F00828FED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Accelerator4Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = leo.Accelerator4Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Accelerator4.app/Accelerator4";
+			};
+			name = Debug;
+		};
+		B3B4A8781FA6765F00828FED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Accelerator4Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = leo.Accelerator4Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Accelerator4.app/Accelerator4";
+			};
+			name = Release;
+		};
 		B3CF65841FA48D6B0024A9A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -404,6 +515,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B3B4A8761FA6765F00828FED /* Build configuration list for PBXNativeTarget "Accelerator4Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3B4A8771FA6765F00828FED /* Debug */,
+				B3B4A8781FA6765F00828FED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B3CF656F1FA48D6B0024A9A3 /* Build configuration list for PBXProject "Accelerator4" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
