@@ -40,3 +40,8 @@ class MainFuc:
             # brk = int(put)
             # if brk==1:
             #    break
+
+        setup()
+        modifier()
+        send_data()
+        timer()
