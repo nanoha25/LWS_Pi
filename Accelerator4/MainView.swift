@@ -8,6 +8,9 @@
 
 import Foundation
 import UIKit
+import Firebase
+import FirebaseDatabase
+import FirebaseAuth
 
 import CoreMotion
 
@@ -43,6 +46,9 @@ class MainView: UIViewController {
                     print("Alarm!!!!!! \(threshold_rate)and angle is \(angle)!")
                     self.alarm.text = "Fall detected"
                     self.CancelResult.isHidden = false
+                    let userUid = Auth.auth().currentUser?.uid
+                    let setLocation =  Database.database().reference().child("users").child(userUid!).child("Fall")
+                    setLocation.setValue("True")
                 }
                 
             }

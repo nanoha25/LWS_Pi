@@ -23,6 +23,7 @@ class UserVC: UIViewController,UIImagePickerControllerDelegate,UINavigationContr
     @IBOutlet weak var addressNofiled:UITextField!
     @IBOutlet weak var weightfiled:UITextField!
     @IBOutlet weak var heightfiled:UITextField!
+    @IBOutlet weak var usernameOfferHelpfield:UITextField!
     var userUid: String!
     var emailField:String!
     var passwordField:String!
@@ -33,6 +34,7 @@ class UserVC: UIViewController,UIImagePickerControllerDelegate,UINavigationContr
     var address: String!
     var weight: String!
     var height: String!
+    var usernameOfferHelp: String!
     
     override func viewDidLoad()
     {
@@ -45,6 +47,7 @@ class UserVC: UIViewController,UIImagePickerControllerDelegate,UINavigationContr
         addressNofiled.clearsOnBeginEditing = true
         weightfiled.clearsOnBeginEditing = true
         heightfiled.clearsOnBeginEditing = true
+        usernameOfferHelpfield.clearsOnBeginEditing = true
         userNamefiled.delegate = self
         userNamefiled.tag = 0 //Increment accordingly
         phoneNofiled.delegate = self
@@ -55,6 +58,8 @@ class UserVC: UIViewController,UIImagePickerControllerDelegate,UINavigationContr
         weightfiled.tag = 0 //Increment accordingly
         heightfiled.delegate = self
         heightfiled.tag = 0 //Increment accordingly
+        usernameOfferHelpfield.delegate = self
+        usernameOfferHelpfield.tag = 0 //Increment accordingly
         self.imagePicker.sourceType = UIImagePickerControllerSourceType.camera
     }
     @IBAction func chooseImage(_sender:Any)
@@ -175,6 +180,7 @@ class UserVC: UIViewController,UIImagePickerControllerDelegate,UINavigationContr
             self.address = self.addressNofiled.text
             self.weight = self.weightfiled.text
             self.height = self.heightfiled.text
+            self.usernameOfferHelp = self.usernameOfferHelpfield.text
             
             self.completeSignInBtn.isEnabled = true
             
@@ -210,7 +216,7 @@ class UserVC: UIViewController,UIImagePickerControllerDelegate,UINavigationContr
                         if let url = downloadURL
                         {
                             self.setUpUser(img: url,username: self.username,phoneNO:self.phoneNo,
-                                address:self.address,weight:self.weight,height:self.height)
+                                address:self.address,weight:self.weight,height:self.height,userNameOfferHelp: self.usernameOfferHelp)
                         }
                         
                     }
@@ -238,7 +244,8 @@ class UserVC: UIViewController,UIImagePickerControllerDelegate,UINavigationContr
     }
     
     
-    func setUpUser(img:String,username:String,phoneNO:String,address:String,weight:String,height:String)
+    func setUpUser(img:String,username:String,phoneNO:String,address:String,weight:String,height:String,userNameOfferHelp
+        :String)
     {
         let userData =
             [
@@ -247,6 +254,8 @@ class UserVC: UIViewController,UIImagePickerControllerDelegate,UINavigationContr
                 "Adress":address,
                 "Weight":weight,
                 "Height":height,
+                "UsernameOfferHelp":userNameOfferHelp,
+                "Fall":"False",
                 "UserImage":img
         ]
         keychain()
