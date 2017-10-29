@@ -41,7 +41,7 @@ class MainFuc:
             # if brk==1:
             #    break
 
-        setup()
-        modifier()
-        send_data()
-        timer()
+    setup()
+    modifier()
+    send_data()
+    timer()
