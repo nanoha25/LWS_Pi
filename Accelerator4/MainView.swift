@@ -14,7 +14,7 @@ import CoreMotion
 class MainView: UIViewController {
     var motionManager = CMMotionManager()
     var motionManager_Gyro = CMMotionManager()
-    
+    @IBOutlet weak var CancelResult: UIButton!
     @IBOutlet weak var x: UILabel!
     @IBOutlet weak var y: UILabel!
     @IBOutlet weak var z: UILabel!
@@ -22,6 +22,7 @@ class MainView: UIViewController {
     @IBOutlet weak var alarm: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.CancelResult.isHidden = true
         motionManager.accelerometerUpdateInterval = 0.1
         motionManager_Gyro.gyroUpdateInterval = 0.1
         motionManager.startAccelerometerUpdates(to: OperationQueue.current!){(data,error)in
@@ -41,6 +42,7 @@ class MainView: UIViewController {
                 {
                     print("Alarm!!!!!! \(threshold_rate)and angle is \(angle)!")
                     self.alarm.text = "Fall detected"
+                    self.CancelResult.isHidden = false
                 }
                 
             }
@@ -60,6 +62,11 @@ class MainView: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    @IBAction func cancelResult(sender: AnyObject?){
+        self.CancelResult.isHidden = true
+        self.alarm.text = nil
+       
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
