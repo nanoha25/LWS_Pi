@@ -17,13 +17,12 @@ import CoreMotion
 class MainView: UIViewController {
     @IBOutlet weak var notificationField: UILabel!
      var Offerhelpname_pub:String!
-    var counter:Int = 0
-    var timer : Timer?
+   
     var notification:String!
     var motionManager = CMMotionManager()
     var motionManager_Gyro = CMMotionManager()
     @IBOutlet weak var CancelResult: UIButton!
-    @IBOutlet weak var CancelMonitor: UIButton!
+    @IBOutlet weak var CancelMonitorResult: UIButton!
     @IBOutlet weak var x: UILabel!
     @IBOutlet weak var y: UILabel!
     @IBOutlet weak var z: UILabel!
@@ -33,7 +32,7 @@ class MainView: UIViewController {
         super.viewDidLoad()
         self.notificationField.text = self.notification
         self.CancelResult.isHidden = true
-        self.CancelMonitor.isHidden = true
+        self.CancelMonitorResult.isHidden = true
         motionManager.accelerometerUpdateInterval = 0.1
         motionManager_Gyro.gyroUpdateInterval = 0.1
         motionManager.startAccelerometerUpdates(to: OperationQueue.current!){(data,error)in
@@ -88,7 +87,7 @@ class MainView: UIViewController {
         let ref = Database.database().reference().child("users")
         let userUid = Auth.auth().currentUser?.uid
         var Offerhelpname:String!
-        self.CancelMonitor.isHidden = false
+        self.CancelMonitorResult.isHidden = false
         ref.child(userUid!).observeSingleEvent(of: .value, with: { (snapshot) in
             
             print(snapshot)
@@ -137,9 +136,12 @@ class MainView: UIViewController {
                             {
                                 // alarm
                                 AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                                
                                 print("The elder falls")
                                 self.notification = "The elder fell!!!"
                                 self.notificationField.text = self.notification
+                                self.CancelMonitorResult.isHidden = false
+                                
 //                                self.counter = 0
 //                                self.timer = Timer.scheduledTimer(timeInterval: 0.6, target: self, selector: Selector(("vibratePhone")), userInfo: nil, repeats: true)
 //                                self.vibratePhone()
@@ -185,8 +187,10 @@ class MainView: UIViewController {
 //    }
     
   
-    @IBAction func cancelMonitor(sender: AnyObject?){
-        self.CancelMonitor.isHidden = true
+    @IBAction func cancelMonitorResult(sender: AnyObject?){
+        self.CancelMonitorResult.isHidden = true
+        self.notificationField.text = nil
+    
         // caneal monitor event
     }
     override func didReceiveMemoryWarning() {
