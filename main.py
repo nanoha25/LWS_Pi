@@ -26,7 +26,7 @@ def setup():
     time.sleep(30)
 
     print('Sent.\n')
-    return 'Successful.\n'
+    return 0
 
 while True:
     setup()
