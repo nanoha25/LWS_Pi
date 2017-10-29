@@ -150,6 +150,7 @@ class MainView: UIViewController {
                             else
                             {
                                 print("The elder is well")
+                                self.notificationField.text = "All good!!"
                             }
                         }
                         else
