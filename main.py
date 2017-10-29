@@ -28,5 +28,5 @@ def setup():
     print('Sent.\n')
     return 0
 
-while True:
+#while True:
     setup()
