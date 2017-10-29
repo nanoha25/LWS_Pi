@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3FA4750F9EC18A8C24917D6E /* Pods_Accelerator4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3BA49D041C9318A5392788 /* Pods_Accelerator4.framework */; };
+		B3B4A86A1FA5DB2E00828FED /* camera-vector-image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3B4A8691FA5DB2E00828FED /* camera-vector-image.jpg */; };
 		B3CF65781FA48D6B0024A9A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CF65771FA48D6B0024A9A3 /* AppDelegate.swift */; };
 		B3CF657A1FA48D6B0024A9A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CF65791FA48D6B0024A9A3 /* ViewController.swift */; };
 		B3CF657D1FA48D6B0024A9A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3CF657B1FA48D6B0024A9A3 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		248D6CC9033B95371A79770F /* Pods-Accelerator4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Accelerator4.release.xcconfig"; path = "Pods/Target Support Files/Pods-Accelerator4/Pods-Accelerator4.release.xcconfig"; sourceTree = "<group>"; };
 		4C3BA49D041C9318A5392788 /* Pods_Accelerator4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Accelerator4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64674FE921BB8C236799EF79 /* Pods-Accelerator4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Accelerator4.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Accelerator4/Pods-Accelerator4.debug.xcconfig"; sourceTree = "<group>"; };
+		B3B4A8691FA5DB2E00828FED /* camera-vector-image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "camera-vector-image.jpg"; sourceTree = "<group>"; };
 		B3CF65741FA48D6B0024A9A3 /* Accelerator4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Accelerator4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3CF65771FA48D6B0024A9A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3CF65791FA48D6B0024A9A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				B3CF65911FA50B860024A9A3 /* slip-and-fall.jpg */,
+				B3B4A8691FA5DB2E00828FED /* camera-vector-image.jpg */,
 				B3CF65891FA4B0060024A9A3 /* GoogleService-Info.plist */,
 				B3CF65771FA48D6B0024A9A3 /* AppDelegate.swift */,
 				B3CF65791FA48D6B0024A9A3 /* ViewController.swift */,
@@ -168,6 +171,7 @@
 				B3CF65921FA50B870024A9A3 /* slip-and-fall.jpg in Resources */,
 				B3CF65821FA48D6B0024A9A3 /* LaunchScreen.storyboard in Resources */,
 				B3CF658A1FA4B0060024A9A3 /* GoogleService-Info.plist in Resources */,
+				B3B4A86A1FA5DB2E00828FED /* camera-vector-image.jpg in Resources */,
 				B3CF65901FA4E5DB0024A9A3 /* portrait.jpg in Resources */,
 				B3CF657F1FA48D6B0024A9A3 /* Assets.xcassets in Resources */,
 				B3CF657D1FA48D6B0024A9A3 /* Main.storyboard in Resources */,

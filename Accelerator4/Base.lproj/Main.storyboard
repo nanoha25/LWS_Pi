@@ -274,7 +274,7 @@
                                     <action selector="selectedImagePickerWith_sender:" destination="Lrx-RP-M3F" eventType="touchUpInside" id="c1y-yA-KLN"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="portrait.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="XjA-jy-r3c">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera-vector-image.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="XjA-jy-r3c">
                                 <rect key="frame" x="127" y="60" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="dsB-uG-WH4"/>
@@ -337,7 +337,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="portrait.jpg" width="1105" height="732"/>
+        <image name="camera-vector-image.jpg" width="660" height="660"/>
         <image name="slip-and-fall.jpg" width="2449" height="2449"/>
     </resources>
 </document>
