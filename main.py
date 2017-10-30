@@ -23,8 +23,7 @@ def weather_station():
     response = conn.getresponse()
     conn.close()
     #add a timer as per requirement from thingspeak.
-    #time.sleep(30)
-    time.sleep(10)
+    time.sleep(30)
 
     print('Sent.\n')  #provide terminal output indicating data is sent.
     return 0
