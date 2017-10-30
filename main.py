@@ -15,15 +15,16 @@ def weather_station():
     ftr = 1.39
     temp = temp_ori / ftr
     #send data to thingspeak.
-    params = urllib.urlencode(
-        {'field1': temp, 'field2': humidity, 'field3': pressure, 'key': '9B1ZCDNMTLRHRXRP'})
+    #params = urllib.urlencode({'field1': temp, 'field2': humidity, 'field3': pressure, 'key': '9B1ZCDNMTLRHRXRP'})
+    params = urllib.urlencode({'field1': temp, 'field2': humidity, 'field3': pressure, 'key': ' 9L28IP6LTIYXR19O'})
     headers = {"Content-type": "application/x-www-form-urlencoded", "Accept": "text/plain"}
     conn = httplib.HTTPConnection("api.thingspeak.com:80")
     conn.request("POST", "/update", params, headers)
     response = conn.getresponse()
     conn.close()
     #add a timer as per requirement from thingspeak.
-    time.sleep(30)
+    #time.sleep(30)
+    time.sleep(10)
 
     print('Sent.\n')  #provide terminal output indicating data is sent.
     return 0
