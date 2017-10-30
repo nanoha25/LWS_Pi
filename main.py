@@ -15,8 +15,7 @@ def weather_station():
     ftr = 1.39
     temp = temp_ori / ftr
     #send data to thingspeak.
-    #params = urllib.urlencode({'field1': temp, 'field2': humidity, 'field3': pressure, 'key': '9B1ZCDNMTLRHRXRP'}) #to local station channel
-    params = urllib.urlencode({'field1': temp, 'field2': humidity, 'field3': pressure, 'key': ' 9L28IP6LTIYXR19O'}) #to test channel
+    params = urllib.urlencode({'field1': temp, 'field2': humidity, 'field3': pressure, 'key': '9B1ZCDNMTLRHRXRP'}) #to local station channel
     headers = {"Content-type": "application/x-www-form-urlencoded", "Accept": "text/plain"}
     conn = httplib.HTTPConnection("api.thingspeak.com:80")
     conn.request("POST", "/update", params, headers)
